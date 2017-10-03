@@ -63,6 +63,14 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func skipTo(_ sender: Any) {
+        
+        if isPrepare {
+            audio?.currentTime = TimeInterval(slider.value)
+        }
+        
+    }
+    
     @IBAction func playMusic(_ sender: Any) {
         if isPrepare && (!(audio?.isPlaying)!) {
             audio?.play()
